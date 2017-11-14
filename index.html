@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./public/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="./public/font-awesome/css/font-awesome.min.css">
+    <script src="./public/js/jquery-3.2.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+
+<body>
+    <div class="main">
+       <div class="bg"></div>
+        <div class="container">
+            <div class="content">
+                <div class="col-sm">
+                    <img class="img-lg" src="./public/pictures/1.png"/>
+                </div>
+                <div class="col-lg">
+                    <div class="heading">
+                        <h1>Vyacheslav Korotach</h1>
+                    </div>
+                    <div class="info-img">
+                        <img class="img-sm" src="./public/pictures/2.png">
+                    </div>
+                    <div class="info-lvl-1">
+                        <p>A friend, buddy and dude from earth</p>
+                    </div>
+                    <div class="info-lvl-2">
+                        <p>Euismod consulatu eos eu. Vocent facilis sensibus vel ut, quo an nihil qualisque. Mea eu nulla prompta. Dicat velit at usum, malis euismod vim an</p>
+                    </div>
+                    <div class="buttons">
+                        <a href="#contacts" id="btn-contact"
+                        class="btn btn-default">CONTACT ME</a>
+                    <a class="btn btn-primary">LOOK AT CV</a>
+                    </div>
+                </div>
+            </div>
+            <p><a id="contacts"></a></p>
+            <div class="content contacts">
+                <div class="row-lvl-1">
+                    <div class="heading">
+                        <h1>Contact me</h1>
+                        
+                    </div>
+                    <div class="info-lvl-1">
+                        <p>You can message me to discuss on a project or just to say hi</p>
+                    </div>
+                </div>
+                <div class="row-lvl-2">
+                    <div class="item-contact">
+                        <i class="fa fa-envelope-o fa-4x" aria-hidden="true"></i>
+                        <p>vkorotach@gmail.com</p>
+                    </div>
+                    <div class="item-contact">
+                        <i class="fa fa-phone fa-4x" aria-hidden="true"></i>
+                        <p>+38 (097) 497-83-44</p>
+                    </div>
+                    <div class="item-contact">
+                        <i class="fa fa-map-marker fa-4x" aria-hidden="true"></i>
+                        <p>Kiev, Ukraine</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+             
+$(document).ready(function(){
+	$("#btn-contact").on("click", function (event) {
+		event.preventDefault();
+
+		var id  = $(this).attr('href'),
+			top = $(id).offset().top;
+		
+		
+		$('body,html').animate({scrollTop: top}, 800);
+	});
+});
+        </script>
+    </div>
+</body>
+
+</html>
